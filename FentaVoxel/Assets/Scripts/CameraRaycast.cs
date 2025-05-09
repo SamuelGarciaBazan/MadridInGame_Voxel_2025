@@ -2,18 +2,20 @@ using UnityEngine;
 
 public class CameraRaycast : MonoBehaviour
 {
+    [SerializeField] float _distance;
 
     private Camera _mainCamera;
+
 
     public Collider MakeRaycast(LayerMask layer)
     {
         Vector3 mousePos = Input.mousePosition;
-        mousePos.z = 200;
+        mousePos.z = _distance;
 
         Ray ray = _mainCamera.ScreenPointToRay(mousePos);
         RaycastHit hit;
 
-        if(Physics.Raycast(ray, out hit, 200, layer))
+        if(Physics.Raycast(ray, out hit, _distance, layer))
         {
             return hit.collider;
         }
@@ -37,7 +39,7 @@ public class CameraRaycast : MonoBehaviour
     {
         
         Vector3 mousePos = Input.mousePosition;
-        mousePos.z = 200;
+        mousePos.z = _distance;
         mousePos = _mainCamera.ScreenToWorldPoint(mousePos);
 
         Debug.DrawRay(transform.position,  mousePos - transform.position, Color.red);
