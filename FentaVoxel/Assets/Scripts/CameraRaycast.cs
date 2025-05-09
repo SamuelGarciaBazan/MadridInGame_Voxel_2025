@@ -42,7 +42,7 @@ public class CameraRaycast : MonoBehaviour
         mousePos.z = _distance;
         mousePos = _mainCamera.ScreenToWorldPoint(mousePos);
 
-        Debug.DrawRay(transform.position,  mousePos - transform.position, Color.red);
+        Debug.DrawRay(_mainCamera.transform.position,  mousePos - _mainCamera.transform.position, Color.red);
 
 
 
