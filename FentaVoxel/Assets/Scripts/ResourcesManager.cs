@@ -7,6 +7,12 @@ using UnityEngine;
  */
 public class ResourcesManager : MonoBehaviour
 {
+    public enum ResourcesType
+    {
+        WOOD,WATER,IRON,COPPER
+    }
+
+
     [SerializeField]
     float _wood;
 
