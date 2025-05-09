@@ -1,5 +1,13 @@
 using UnityEngine;
 
+
+
+/*
+ El gameManager es el unico singleton, el resto de singletons, seran componentes del prefab del gameManager, y para acceder se hara 
+GameManager.getInstance().getComponent<>
+ 
+ 
+ */
 public class GameManager : MonoBehaviour
 {
 
