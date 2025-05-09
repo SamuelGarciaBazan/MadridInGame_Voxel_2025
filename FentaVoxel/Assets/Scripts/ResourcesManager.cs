@@ -4,12 +4,13 @@ using UnityEngine;
 /*
  Esta clase guarda los datos de la cantidad  de recursos que tiene  el jugador y se encarga de representar su informacion en la UI
  
+este componente esta en el objeto de GameManager
  */
 public class ResourcesManager : MonoBehaviour
 {
     public enum ResourcesType
     {
-        WOOD,WATER,IRON,COPPER
+        WOOD,   WATER,  IRON,   COPPER
     }
 
 
