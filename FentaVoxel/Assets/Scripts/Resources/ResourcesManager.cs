@@ -15,16 +15,16 @@ public class ResourcesManager : MonoBehaviour
 
 
     [SerializeField]
-    float _wood;
+    public float _wood;
 
     [SerializeField]
-    float _water;
+    public float _water;
 
     [SerializeField]
-    float _iron;
+    public float _iron;
 
     [SerializeField]
-    float _copper;
+    public float _copper;
 
  
 
@@ -69,6 +69,76 @@ public class ResourcesManager : MonoBehaviour
                 Debug.LogWarning("Tipo de recurso no reconocido: " + type);
                 break;
         }
+    }
+
+    public bool hasEnoughResource(ResourcesType type, float amount) 
+    {
+
+        bool hasEnough = false;
+
+        switch (type)
+        {
+            case ResourcesType.WOOD:
+                if (amount <= _wood)
+                {
+                    hasEnough = true;
+                }
+                break;
+
+            case ResourcesType.WATER:
+                if (amount <= _water)
+                {
+                    hasEnough = true;
+                }
+                break;
+
+            case ResourcesType.IRON:
+                if (amount <= _iron)
+                {
+                    hasEnough = true;
+                }
+                break;
+
+            default:
+                Debug.LogWarning("Tipo de recurso no reconocido: " + type);
+                break;
+        }
+
+        return hasEnough;
+
+    }
+
+    public bool spendResource(ResourcesType type, float amount)
+    {
+
+        if(hasEnoughResource(type, amount))
+        {
+            switch (type)
+            {
+                case ResourcesType.WOOD:
+                    _wood -= amount;
+                    break;
+
+                case ResourcesType.WATER:
+                    _water -= amount;
+                    break;
+
+                case ResourcesType.IRON:
+                    _iron -= amount;
+                    break;
+
+                default:
+                    Debug.LogWarning("Tipo de recurso no reconocido: " + type);
+                    break;
+            }
+
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
     }
 
 }
