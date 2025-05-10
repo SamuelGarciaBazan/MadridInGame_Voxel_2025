@@ -32,15 +32,15 @@ public class SpendingResourceManager : MonoBehaviour
     void Update()
     {
 
-            if(_water > 0)
-            {
-                _water -= _waterSpending * _currentRobotsAmount * Time.deltaTime;
-            }
+        if(_water > 0)
+        {
+            _water -= _waterSpending * _currentRobotsAmount * Time.deltaTime;
+        }
             
-            if(_electricity > 0)
-            {
-                _electricity -= _electricitySpending * _currentRobotsAmount * Time.deltaTime;
-            }     
+        if(_electricity > 0)
+        {
+            _electricity -= _electricitySpending * _currentRobotsAmount * Time.deltaTime;
+        }     
 
     }
 
