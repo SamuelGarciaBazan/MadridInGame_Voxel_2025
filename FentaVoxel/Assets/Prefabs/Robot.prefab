@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 9171155804508081569}
   - component: {fileID: 2145881571400859639}
   - component: {fileID: 3819492095599756951}
+  - component: {fileID: 7632152095878180373}
   m_Layer: 0
   m_Name: Robot
   m_TagString: Untagged
@@ -146,3 +147,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01671bd604d901c438a371f07de0892c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _currentResourceTarget: 1
+  _searchTargetRadious: 1000
+  _umbralDistance: 2
+  _currentState: 1
+--- !u!114 &7632152095878180373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2272740301015010850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc5134d5ec030194f8183364f6424c49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _resourcesData:
+  - damage: 10
+    atackRate: 1
+    layer:
+      serializedVersion: 2
+      m_Bits: 128
+    pickableItemPrefab: {fileID: 0}

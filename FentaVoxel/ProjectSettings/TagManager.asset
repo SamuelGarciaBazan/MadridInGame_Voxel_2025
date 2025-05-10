@@ -14,9 +14,9 @@ TagManager:
   - WaterResource
   - WoodResource
   - IronResource
+  - CopperResource
+  - 
   - PickeableItemResource
-  - 
-  - 
   - 
   - 
   - 
