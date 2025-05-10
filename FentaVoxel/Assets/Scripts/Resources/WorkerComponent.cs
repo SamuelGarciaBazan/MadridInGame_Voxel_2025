@@ -58,7 +58,7 @@ public class WorkerComponent : MonoBehaviour
             return;
         }
 
-        if (newTarget.GetComponent<ResourceComponente>() == null) {
+        if (newTarget.GetComponentInParent<ResourceComponente>() == null) {
 
             //Debug.Log("error intententando insertar un target que no tiene el componente de resourceComponente");
         
@@ -68,7 +68,7 @@ public class WorkerComponent : MonoBehaviour
         }
 
         if(_target == null){
-            _target = newTarget.GetComponent<ResourceComponente>();
+            _target = newTarget.GetComponentInParent<ResourceComponente>();
         }
         else if ( newTarget == null)
         {
@@ -81,7 +81,7 @@ public class WorkerComponent : MonoBehaviour
 
             _target = null;
         }
-        else if(_target.GetResourcesType() != newTarget.GetComponent<ResourceComponente>().GetResourcesType())
+        else if(_target.GetResourcesType() != newTarget.GetComponentInParent<ResourceComponente>().GetResourcesType())
         {
             //drop
             dropItem();

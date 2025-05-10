@@ -27,7 +27,7 @@ public class RobotController : MonoBehaviour
 
     WorkerComponent _workerComponent;
 
-    Transform _objectTarget;
+    Transform _objectTarget = null  ;
 
     enum RobotState
     {
