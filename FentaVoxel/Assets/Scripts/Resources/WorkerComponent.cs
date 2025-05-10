@@ -48,6 +48,12 @@ public class WorkerComponent : MonoBehaviour
         {
             //Debug.Log("error intententando insertar un target null");
 
+            if(_target != null)
+            {
+                _target._positionsOcupeds[_indexResourceOcupped] = false;
+
+            }
+
             _target = null;
             return;
         }
