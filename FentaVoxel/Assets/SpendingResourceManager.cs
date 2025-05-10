@@ -18,7 +18,7 @@ public class SpendingResourceManager : MonoBehaviour
     [SerializeField] public float _waterSpending;
     [SerializeField] public float _electricitySpending;
 
-    [SerializeField] public float _currentRobotsAmount;
+    [SerializeField] public float _currentRobotsAmount; 
 
     //referencias a los elementos de la UI...
 

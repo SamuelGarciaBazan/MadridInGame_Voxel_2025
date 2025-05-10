@@ -41,6 +41,12 @@ public class RobotManager : MonoBehaviour
     /// </summary>
     public int FreeRobots => freeRobots.Count;
 
+    private void Update() {
+        if (spendingResourceManager._electricity <= 0) Apagon();
+        if (spendingResourceManager._water <= 0) Apagon();
+    }
+
+
     /// <summary>
     /// Número total de robots trabajando (no incluye libres).
     /// </summary>
@@ -89,11 +95,9 @@ public class RobotManager : MonoBehaviour
     /// </summary>
     public void Apagon() {
         // Mover todos los robots de madera, agua e hierro a libres
-        MoveAllToFree(woodRobots);
-        MoveAllToFree(waterRobots);
-        MoveAllToFree(ironRobots);
-        OnRobotCountsChanged?.Invoke();
-        spendingResourceManager.SetRobotsAmount(WorkingRobotsAmount());
+        while (MoveToFree(ResourcesManager.ResourcesType.WOOD)) { }
+        while (MoveToFree(ResourcesManager.ResourcesType.WATER)) { }
+        while (MoveToFree(ResourcesManager.ResourcesType.IRON)) { }
     }
 
     /// <summary>
@@ -127,18 +131,6 @@ public class RobotManager : MonoBehaviour
         OnRobotCountsChanged?.Invoke();
         spendingResourceManager.SetRobotsAmount(WorkingRobotsAmount());
         return true;
-    }
-
-    /// <summary>
-    /// Método auxiliar para mover todos los robots de una lista a libres.
-    /// </summary>
-    private void MoveAllToFree(List<GameObject> list) {
-        foreach (var robot in list) {
-            freeRobots.Add(robot);
-            robot.GetComponent<RobotController>().setResourceTarget(RobotResourceTarget.NONE);
-            robot.SetActive(false);
-        }
-        list.Clear();
     }
 
     /// <summary>
