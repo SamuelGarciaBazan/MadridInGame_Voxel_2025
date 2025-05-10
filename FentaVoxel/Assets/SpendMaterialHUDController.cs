@@ -20,7 +20,7 @@ public class SpendMaterialHUDController : MonoBehaviour
 
             while (i < _typesSpended.Length && canDeposit)
             {
-                if (_rm.hasEnoughResource(_typesSpended[i], _amountCost[i]))
+                if (!_rm.hasEnoughResource(_typesSpended[i], _amountCost[i]))
                 {
                     canDeposit = false;
                 }
@@ -54,7 +54,7 @@ public class SpendMaterialHUDController : MonoBehaviour
 
         while (i < _typesSpended.Length && canDeposit)
         {
-            if (_rm.hasEnoughResource(_typesSpended[i], _amount))
+            if (!_rm.hasEnoughResource(_typesSpended[i], _amount))
             {
                 canDeposit = false;
             }
@@ -74,31 +74,15 @@ public class SpendMaterialHUDController : MonoBehaviour
 
     }
 
-    public bool DepositMaxAmount(int _amount)
+    public void DepositMaxAmount()
     {
-        bool canDeposit = true;
-
         int i = 0;
 
-        while (i < _typesSpended.Length && canDeposit)
+        while (i < _typesSpended.Length)
         {
-            if (_rm.hasEnoughResource(_typesSpended[i], _amount))
-            {
-                canDeposit = false;
-            }
+            _rm.spendResource(_typesSpended[i], _rm.getResourceAmount(_typesSpended[i]));
             ++i;
         }
-
-        if (canDeposit)
-        {
-            while (i < _typesSpended.Length && canDeposit)
-            {
-                _rm.spendResource(_typesSpended[i], _amount);
-                ++i;
-            }
-        }
-
-        return canDeposit;
 
     }
 

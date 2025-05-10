@@ -19,6 +19,5 @@ public class HUDMenuManager : MonoBehaviour
         txtWood.text = ((int)(resourcesManager._wood)).ToString();
         txtWater.text = ((int)(resourcesManager._water)).ToString();
         txtMetal.text = ((int)(resourcesManager._iron)).ToString();
-        
     }
 }

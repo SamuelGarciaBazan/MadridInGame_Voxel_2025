@@ -71,6 +71,34 @@ public class ResourcesManager : MonoBehaviour
         }
     }
 
+    public float getResourceAmount(ResourcesType type)
+    {
+        float resourceAmount = 0;
+
+        switch (type)
+        {
+            case ResourcesType.WOOD:
+                resourceAmount = _wood;
+                break;
+
+            case ResourcesType.WATER:
+                resourceAmount = _water;
+                break;
+
+            case ResourcesType.IRON:
+                resourceAmount = _iron;
+                break;
+
+            default:
+                Debug.LogWarning("Tipo de recurso no reconocido: " + type);
+                break;
+        }
+
+        return resourceAmount;
+
+    }
+
+
     public bool hasEnoughResource(ResourcesType type, float amount) 
     {
 

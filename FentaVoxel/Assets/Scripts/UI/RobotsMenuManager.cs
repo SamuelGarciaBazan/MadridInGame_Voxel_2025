@@ -31,6 +31,7 @@ public class RobotsMenuManager : MonoBehaviour
     [Header("Managers")]
     [SerializeField] private RobotManager robotManager;
     [SerializeField] private ResourcesManager resourcesManager;
+    [SerializeField] private SpendMaterialHUDController spendMaterialHUDController;
 
     private void Awake() {
         // Suscribir listeners a botones
@@ -70,9 +71,11 @@ public class RobotsMenuManager : MonoBehaviour
     /// Instancia un nuevo robot y lo añade a libres.
     /// </summary>
     private void OnSpawnRobot() {
-        // Opcional: puedes especificar posición de spawn
-        robotManager.CreateRobot();
-        UpdateHUD();
+        if (spendMaterialHUDController.DepositAmount()) {
+            robotManager.CreateRobot();
+            UpdateHUD();
+        }
+ 
     }
 
     /// <summary>
