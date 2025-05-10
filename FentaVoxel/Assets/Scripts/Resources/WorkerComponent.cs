@@ -38,10 +38,19 @@ public class WorkerComponent : MonoBehaviour
     //changeTarget
     public void setTarget(Transform newTarget)
     {
+        if(newTarget == null)
+        {
+            Debug.Log("error intententando insertar un target null");
+
+            return;
+        }
+
+
         if (newTarget.GetComponent<ResourceComponente>() == null) {
 
             Debug.Log("error intententando insertar un target que no tiene el componente de resourceComponente");
         
+            return;
         }
 
         if(_target == null){
