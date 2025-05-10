@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using Unity.AI.Navigation;
 using UnityEngine;
 using static UnityEngine.Rendering.DebugUI.Table;
 
@@ -16,6 +17,9 @@ public class CreateProcedural : MonoBehaviour
     [SerializeField] private float _maxOffset;
     [SerializeField] private float _percerntAmount;
 
+
+
+    public NavMeshSurface surface;
     void Start()
     {
         GenerateFromFile();
@@ -50,11 +54,16 @@ public class CreateProcedural : MonoBehaviour
             
         }
 
+
+
+        reBakeNavMesh();
     }
 
-    // Update is called once per frame
-    void Update()
+    void reBakeNavMesh()
     {
-
+        if (surface != null) { 
+            surface.BuildNavMesh();
+        }
     }
+ 
 }
