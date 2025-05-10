@@ -27,7 +27,7 @@ public class RobotController : MonoBehaviour
 
     WorkerComponent _workerComponent;
 
-    Transform _objectTarget;
+    Transform _objectTarget = null  ;
 
     enum RobotState
     {
@@ -52,6 +52,7 @@ public class RobotController : MonoBehaviour
             if(newTarget == RobotManager.RobotResourceTarget.NONE)
             {
                 _currentState = RobotState.DESACTIVE;
+                _navMeshAgent.SetDestination(transform.position);
             }
             else
             {

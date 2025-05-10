@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01671bd604d901c438a371f07de0892c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentResourceTarget: 1
+  _currentResourceTarget: 0
   _searchTargetRadious: 1000
   _umbralDistance: 1
   _currentState: 1
