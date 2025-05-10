@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerWork : MonoBehaviour
 {
@@ -128,6 +129,21 @@ public class PlayerWork : MonoBehaviour
         }
 
     }
+
+    public void Work(InputAction.CallbackContext context)
+    {
+
+        if (context.canceled)
+        {
+            _workerComponent.setTarget(null);
+        }
+        else
+        {
+            _workerComponent.setTarget(_lastNearest.transform);
+        }
+
+    }
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
