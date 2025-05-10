@@ -142,6 +142,7 @@ GameObject:
   - component: {fileID: 9189097451837675717}
   - component: {fileID: 740550351383726261}
   - component: {fileID: 5872405396453872708}
+  - component: {fileID: 3419257292625739750}
   m_Layer: 7
   m_Name: WoodResourcePrefab
   m_TagString: Untagged
@@ -234,7 +235,7 @@ CapsuleCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5000001
@@ -273,10 +274,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 0.8113208, g: 0.28625846, b: 0.28625846, a: 1}
-  outlineWidth: 2
+  outlineWidth: 0
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!54 &3419257292625739750
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5854833087703968109}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &9091428013021298811
 GameObject:
   m_ObjectHideFlags: 0

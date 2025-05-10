@@ -106,7 +106,7 @@ public class RobotController : MonoBehaviour
                     }
                     else
                     {
-                        Debug.Log("no se encontro objetivo de la layer indicada en el radio de busqueda");
+                        //Debug.Log("no se encontro objetivo de la layer indicada en el radio de busqueda");
                         //posicion aleatoria en el rango?
                     }
                 }

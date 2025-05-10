@@ -16,6 +16,16 @@ using UnityEngine;
 public class Outline : MonoBehaviour {
   private static HashSet<Mesh> registeredMeshes = new HashSet<Mesh>();
 
+
+
+    public void setOutlineWidht(float value)
+    {
+        outlineWidth = value;
+        needsUpdate = true;
+    }
+
+
+
   public enum Mode {
     OutlineAll,
     OutlineVisible,
@@ -59,7 +69,7 @@ public class Outline : MonoBehaviour {
   [SerializeField]
   private Color outlineColor = Color.white;
 
-  [SerializeField, Range(0f, 10f)]
+  [SerializeField, Range(0f, 50f)]
   private float outlineWidth = 2f;
 
   [Header("Optional")]

@@ -149,7 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentResourceTarget: 1
   _searchTargetRadious: 1000
-  _umbralDistance: 2
+  _umbralDistance: 1
   _currentState: 1
 --- !u!114 &7632152095878180373
 MonoBehaviour:
@@ -188,3 +188,6 @@ MonoBehaviour:
       serializedVersion: 2
       m_Bits: 512
     pickableItemPrefab: {fileID: 3576304266163525746, guid: f2841009c88f97b449f14935de7c48b2, type: 3}
+  _minDropDistance: 1
+  _maxDropDistance: 4
+  _indexResourceOcupped: -1
