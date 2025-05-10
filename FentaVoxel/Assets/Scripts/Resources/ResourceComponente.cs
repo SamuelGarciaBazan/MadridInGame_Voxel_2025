@@ -24,8 +24,16 @@ public class ResourceComponente : MonoBehaviour
 
     public List<bool> _positionsOcupeds = new List<bool>();
 
+    public Transform _workablePositionsParent;
+
     private void Awake()
     {
+        for(int i = 0; i < _workablePositionsParent.childCount; i++)
+        {
+            _workablePositions.Add(_workablePositionsParent.GetChild(i));
+        }
+
+
         _currentLife = _maxLife;
 
         for (int i = 0; i < _workablePositions.Count; i++) { 
