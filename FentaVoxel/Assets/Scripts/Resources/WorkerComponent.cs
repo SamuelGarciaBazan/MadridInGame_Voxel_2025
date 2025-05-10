@@ -25,6 +25,11 @@ public class WorkerComponent : MonoBehaviour
     [SerializeField]
     List<ResourceData> _resourcesData;
 
+    [SerializeField]
+    private float _minDropDistance = 1;
+
+    [SerializeField]
+    private float _maxDropDistance = 4;
 
     //target
     ResourceComponente _target = null;
@@ -115,8 +120,14 @@ public class WorkerComponent : MonoBehaviour
     void dropItem()
     {
 
-        GameObject pickableItem =  Instantiate(getResourceData(_target.GetResourcesType()).pickableItemPrefab, transform.position, Quaternion.identity);
+        int angleDrop = Random.Range(0, 360);
 
+        float _dropDistance = Random.Range(_minDropDistance, _maxDropDistance);
+
+        Vector3 dropPos = transform.position + 
+            (new Vector3(Mathf.Cos(Mathf.Deg2Rad * angleDrop), 0, Mathf.Sin(Mathf.Deg2Rad * angleDrop)) * _dropDistance);
+
+        GameObject pickableItem =  Instantiate(getResourceData(_target.GetResourcesType()).pickableItemPrefab, dropPos, Quaternion.identity);
 
         float subtractAmount = _resourceCount >=  _target.getPackageDropRate() ? _target.getPackageDropRate() : _resourceCount;
 
