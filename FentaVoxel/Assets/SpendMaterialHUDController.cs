@@ -78,9 +78,12 @@ public class SpendMaterialHUDController : MonoBehaviour
 
     }
 
-    public void DepositMaxAmount()
+    public float DepositMaxAmount()
     {
+
         int i = 0;
+
+        float originalAmount = _rm.getResourceAmount(_typesSpended[i]);
 
         while (i < _typesSpended.Length)
         {

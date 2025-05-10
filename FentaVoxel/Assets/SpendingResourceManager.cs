@@ -37,12 +37,12 @@ public class SpendingResourceManager : MonoBehaviour
         {
             if(_water > 0)
             {
-                _water -= _maxWater * _currentRobotsAmount;
+                _water -= _waterSpending * _currentRobotsAmount * Time.deltaTime;
             }
             
             if(_electricity > 0)
             {
-                _electricity -= _electricitySpending * _currentRobotsAmount;
+                _electricity -= _electricitySpending * _currentRobotsAmount * Time.deltaTime;
             }
             
         }
@@ -88,7 +88,7 @@ public class SpendingResourceManager : MonoBehaviour
         }
     }
 
-    public void addMaxResources(ResourcesType type, float amount)
+    public float addMaxResources(ResourcesType type, float amount)
     {
         switch (type)
         {
@@ -109,7 +109,16 @@ public class SpendingResourceManager : MonoBehaviour
                 break;
         }
 
+        float vuelta = 0;
 
+        if (_electricity > _maxElectricity)
+        {
+            vuelta = _electricity - _maxElectricity;
+            _electricity = _maxElectricity;
+        }
+
+        return vuelta;
+        
     }
 
 }
