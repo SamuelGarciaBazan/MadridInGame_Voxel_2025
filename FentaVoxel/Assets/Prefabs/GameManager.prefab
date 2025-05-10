@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 557201b6a4c665545a0181dfcc1986f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraRaycast: {fileID: 0}
+  cameraRaycast: {fileID: 4725099246616082314}
   _chooseRobotTaskPanel: {fileID: 0}
 --- !u!114 &4725099246616082314
 MonoBehaviour:
