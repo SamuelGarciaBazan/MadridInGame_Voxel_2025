@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 903985972702789514}
   - component: {fileID: 6799276991819878629}
   - component: {fileID: 3630260604939968992}
+  - component: {fileID: 6113670857727903801}
   m_Layer: 6
   m_Name: WaterResourcePrefab
   m_TagString: Untagged
@@ -125,3 +126,21 @@ MonoBehaviour:
   _maxLife: 100
   _packageDropRate: 10
   resourceType: 1
+--- !u!114 &6113670857727903801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2175250700725774511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.8113208, g: 0.28625846, b: 0.28625846, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
