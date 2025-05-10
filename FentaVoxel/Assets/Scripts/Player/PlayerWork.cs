@@ -29,7 +29,10 @@ public class PlayerWork : MonoBehaviour
         //_nearestDistance = Mathf.Infinity;
 
         if (_hoveredResources.Count == 0)
+        {
+            _lastNearest = null;
             return;
+        }
 
         GameObject nearest = null;
         float nearestDist = float.MaxValue;

@@ -48,7 +48,7 @@ public class WorkerComponent : MonoBehaviour
         {
             //Debug.Log("error intententando insertar un target null");
 
-            if(_target != null)
+            if(_target != null && _indexResourceOcupped >= 0)
             {
                 _target._positionsOcupeds[_indexResourceOcupped] = false;
 

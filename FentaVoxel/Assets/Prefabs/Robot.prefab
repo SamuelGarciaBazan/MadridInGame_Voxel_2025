@@ -150,7 +150,7 @@ MonoBehaviour:
   _currentResourceTarget: 0
   _searchTargetRadious: 1000
   _umbralDistance: 1
-  _currentState: 1
+  _currentState: 0
 --- !u!114 &7632152095878180373
 MonoBehaviour:
   m_ObjectHideFlags: 0

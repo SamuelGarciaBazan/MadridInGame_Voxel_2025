@@ -807,17 +807,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a17c66aee1248d43becfd74914e8bf6, type: 3}
---- !u!114 &1789947759 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1362825223091438050, guid: 9df4bad26edf99b4c9b723cca8c33a1a, type: 3}
-  m_PrefabInstance: {fileID: 1892775269}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea38ba768c77de64bbdf0cd3642f03cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1892775269
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -826,46 +815,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 757835949525204926, guid: 9df4bad26edf99b4c9b723cca8c33a1a, type: 3}
-      propertyPath: m_ActionEvents.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 757835949525204926, guid: 9df4bad26edf99b4c9b723cca8c33a1a, type: 3}
-      propertyPath: m_ActionEvents.Array.data[3].m_ActionId
-      value: 0255f90b-f328-4075-9b4c-b2aacf632518
-      objectReference: {fileID: 0}
-    - target: {fileID: 757835949525204926, guid: 9df4bad26edf99b4c9b723cca8c33a1a, type: 3}
-      propertyPath: m_ActionEvents.Array.data[3].m_ActionName
-      value: 'PlayerMap/Interact[/Keyboard/e]'
-      objectReference: {fileID: 0}
-    - target: {fileID: 757835949525204926, guid: 9df4bad26edf99b4c9b723cca8c33a1a, type: 3}
-      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 757835949525204926, guid: 9df4bad26edf99b4c9b723cca8c33a1a, type: 3}
-      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 757835949525204926, guid: 9df4bad26edf99b4c9b723cca8c33a1a, type: 3}
-      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1789947759}
-    - target: {fileID: 757835949525204926, guid: 9df4bad26edf99b4c9b723cca8c33a1a, type: 3}
-      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 757835949525204926, guid: 9df4bad26edf99b4c9b723cca8c33a1a, type: 3}
-      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Work
-      objectReference: {fileID: 0}
-    - target: {fileID: 757835949525204926, guid: 9df4bad26edf99b4c9b723cca8c33a1a, type: 3}
-      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PlayerWork, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 757835949525204926, guid: 9df4bad26edf99b4c9b723cca8c33a1a, type: 3}
-      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 3248394171403068030, guid: 9df4bad26edf99b4c9b723cca8c33a1a, type: 3}
       propertyPath: m_Name
       value: Player
@@ -910,74 +859,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9152387121917802887, guid: 9df4bad26edf99b4c9b723cca8c33a1a, type: 3}
-      propertyPath: _resourcesData.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 9152387121917802887, guid: 9df4bad26edf99b4c9b723cca8c33a1a, type: 3}
-      propertyPath: _resourcesData.Array.data[0].damage
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9152387121917802887, guid: 9df4bad26edf99b4c9b723cca8c33a1a, type: 3}
-      propertyPath: _resourcesData.Array.data[1].damage
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9152387121917802887, guid: 9df4bad26edf99b4c9b723cca8c33a1a, type: 3}
-      propertyPath: _resourcesData.Array.data[2].damage
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9152387121917802887, guid: 9df4bad26edf99b4c9b723cca8c33a1a, type: 3}
-      propertyPath: _resourcesData.Array.data[3].damage
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9152387121917802887, guid: 9df4bad26edf99b4c9b723cca8c33a1a, type: 3}
-      propertyPath: _resourcesData.Array.data[0].atackRate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9152387121917802887, guid: 9df4bad26edf99b4c9b723cca8c33a1a, type: 3}
-      propertyPath: _resourcesData.Array.data[1].atackRate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9152387121917802887, guid: 9df4bad26edf99b4c9b723cca8c33a1a, type: 3}
-      propertyPath: _resourcesData.Array.data[2].atackRate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9152387121917802887, guid: 9df4bad26edf99b4c9b723cca8c33a1a, type: 3}
-      propertyPath: _resourcesData.Array.data[3].atackRate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9152387121917802887, guid: 9df4bad26edf99b4c9b723cca8c33a1a, type: 3}
-      propertyPath: _resourcesData.Array.data[0].layer.m_Bits
-      value: 128
-      objectReference: {fileID: 0}
-    - target: {fileID: 9152387121917802887, guid: 9df4bad26edf99b4c9b723cca8c33a1a, type: 3}
-      propertyPath: _resourcesData.Array.data[1].layer.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
-    - target: {fileID: 9152387121917802887, guid: 9df4bad26edf99b4c9b723cca8c33a1a, type: 3}
-      propertyPath: _resourcesData.Array.data[2].layer.m_Bits
-      value: 256
-      objectReference: {fileID: 0}
-    - target: {fileID: 9152387121917802887, guid: 9df4bad26edf99b4c9b723cca8c33a1a, type: 3}
-      propertyPath: _resourcesData.Array.data[3].layer.m_Bits
-      value: 512
-      objectReference: {fileID: 0}
-    - target: {fileID: 9152387121917802887, guid: 9df4bad26edf99b4c9b723cca8c33a1a, type: 3}
-      propertyPath: _resourcesData.Array.data[0].pickableItemPrefab
-      value: 
-      objectReference: {fileID: 3576304266163525746, guid: b8ed816335954c44f9d9934a18221bc1, type: 3}
-    - target: {fileID: 9152387121917802887, guid: 9df4bad26edf99b4c9b723cca8c33a1a, type: 3}
-      propertyPath: _resourcesData.Array.data[1].pickableItemPrefab
-      value: 
-      objectReference: {fileID: 3576304266163525746, guid: 85e16a9a9ce74b34f978f67a9c268423, type: 3}
-    - target: {fileID: 9152387121917802887, guid: 9df4bad26edf99b4c9b723cca8c33a1a, type: 3}
-      propertyPath: _resourcesData.Array.data[2].pickableItemPrefab
-      value: 
-      objectReference: {fileID: 3576304266163525746, guid: 7f3a76294c5b84848a0ae1fc6dae235f, type: 3}
-    - target: {fileID: 9152387121917802887, guid: 9df4bad26edf99b4c9b723cca8c33a1a, type: 3}
-      propertyPath: _resourcesData.Array.data[3].pickableItemPrefab
-      value: 
-      objectReference: {fileID: 3576304266163525746, guid: f2841009c88f97b449f14935de7c48b2, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
