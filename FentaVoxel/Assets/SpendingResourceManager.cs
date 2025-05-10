@@ -44,6 +44,7 @@ public class SpendingResourceManager : MonoBehaviour
             {
                 _electricity -= _electricitySpending * _currentRobotsAmount * Time.deltaTime;
             }
+            _elapsedTime -=1;
             
         }
         else{
