@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3006154322347437954}
   - component: {fileID: 4725099246616082314}
   - component: {fileID: 170768376302302488}
+  - component: {fileID: 2331590422444135753}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -89,6 +90,7 @@ MonoBehaviour:
   _copperLayer:
     serializedVersion: 2
     m_Bits: 512
+  robotPrefab: {fileID: 0}
 --- !u!114 &3006154322347437954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,8 +103,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 557201b6a4c665545a0181dfcc1986f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraRaycast: {fileID: 4725099246616082314}
-  _chooseRobotTaskPanel: {fileID: 0}
+  _robotLayerMask:
+    serializedVersion: 2
+    m_Bits: 8192
+  _cameraRaycast: {fileID: 0}
 --- !u!114 &4725099246616082314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,3 +238,22 @@ MonoBehaviour:
   m_DefaultActionMap: UI
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &2331590422444135753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7106530100733888513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0541f92e8c5fb0741a0e69aa0113e124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _water: 0
+  _electricity: 0
+  _maxWater: 0
+  _maxElectricity: 0
+  _waterSpending: 0
+  _electricitySpending: 0
+  _currentRobotsAmount: 0

@@ -648,10 +648,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3006154322347437954, guid: 8bed1c2faadc90246a49ff820ab031dc, type: 3}
-      propertyPath: _robotLayerMask.m_Bits
-      value: 8192
-      objectReference: {fileID: 0}
     - target: {fileID: 7106530100733888513, guid: 8bed1c2faadc90246a49ff820ab031dc, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -659,43 +655,19 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7106530100733888513, guid: 8bed1c2faadc90246a49ff820ab031dc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 801265812287475236}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bed1c2faadc90246a49ff820ab031dc, type: 3}
---- !u!1 &801265812287475233 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7106530100733888513, guid: 8bed1c2faadc90246a49ff820ab031dc, type: 3}
-  m_PrefabInstance: {fileID: 801265812287475232}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &801265812287475235 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3006154322347437954, guid: 8bed1c2faadc90246a49ff820ab031dc, type: 3}
   m_PrefabInstance: {fileID: 801265812287475232}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 801265812287475233}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 557201b6a4c665545a0181dfcc1986f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &801265812287475236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 801265812287475233}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0541f92e8c5fb0741a0e69aa0113e124, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _water: 0
-  _electricity: 0
-  _maxWater: 0
-  _maxElectricity: 0
 --- !u!1001 &1741225604508914182
 PrefabInstance:
   m_ObjectHideFlags: 0
