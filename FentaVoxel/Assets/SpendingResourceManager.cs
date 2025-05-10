@@ -20,8 +20,6 @@ public class SpendingResourceManager : MonoBehaviour
 
     [SerializeField] public float _currentRobotsAmount;
 
-    float _elapsedTime = 0;
-
     //referencias a los elementos de la UI...
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -33,8 +31,7 @@ public class SpendingResourceManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(_elapsedTime >= 1) 
-        {
+
             if(_water > 0)
             {
                 _water -= _waterSpending * _currentRobotsAmount * Time.deltaTime;
@@ -43,16 +40,7 @@ public class SpendingResourceManager : MonoBehaviour
             if(_electricity > 0)
             {
                 _electricity -= _electricitySpending * _currentRobotsAmount * Time.deltaTime;
-            }
-            _elapsedTime -=1;
-            
-        }
-        else{
-
-            _elapsedTime += Time.deltaTime;
-
-        }
-        
+            }     
 
     }
 
