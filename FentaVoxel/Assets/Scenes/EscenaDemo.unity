@@ -469,6 +469,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c380f31daa5332c4facca84ef2556760, type: 3}
+--- !u!4 &1198940248 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4518851652334447871, guid: 9df4bad26edf99b4c9b723cca8c33a1a, type: 3}
+  m_PrefabInstance: {fileID: 1892775269}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1201129385
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -898,6 +903,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3952135339429459943, guid: ee6870a8de0092045bb6fa12063183e9, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 1198940248}
     - target: {fileID: 6669401467551246527, guid: ee6870a8de0092045bb6fa12063183e9, type: 3}
       propertyPath: m_Name
       value: Camara y luces
