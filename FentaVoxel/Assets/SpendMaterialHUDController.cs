@@ -78,20 +78,21 @@ public class SpendMaterialHUDController : MonoBehaviour
 
     }
 
+    //Solo valido para cuando hay gasto de 1 elemento
     public float DepositMaxAmount()
     {
+        float originalAmount = 0;
 
-        int i = 0;
-
-        float originalAmount = _rm.getResourceAmount(_typesSpended[i]);
-
-        while (i < _typesSpended.Length)
+        if(_typesSpended.Length <= 1)
         {
-            _rm.spendResource(_typesSpended[i], _rm.getResourceAmount(_typesSpended[i]));
-            ++i;
+            originalAmount = _rm.getResourceAmount(_typesSpended[0]);
+
+            _rm.spendResource(_typesSpended[0], _rm.getResourceAmount(_typesSpended[0]));
+
         }
 
-        return -1;
+        return originalAmount;
+        
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

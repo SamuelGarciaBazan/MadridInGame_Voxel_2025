@@ -3,8 +3,10 @@ using UnityEngine;
 public class RechargeMaterial : MonoBehaviour
 {
     [SerializeField] private SpendingResourceManager.ResourcesType _typeRecharged;
+    [SerializeField] private ResourcesManager.ResourcesType _typeSpended;
 
     private GameManager _gm;
+    private ResourcesManager _rm;
     private SpendingResourceManager _srm;
     private SpendMaterialHUDController _smhc;
 
@@ -18,6 +20,12 @@ public class RechargeMaterial : MonoBehaviour
 
     public void RechargeMax()
     {
+
+        float cantidad = _smhc.DepositMaxAmount();
+
+        cantidad = _srm.addMaxResources(_typeRecharged, cantidad);
+
+        _rm.addResources(_typeSpended, cantidad);
 
     }
 

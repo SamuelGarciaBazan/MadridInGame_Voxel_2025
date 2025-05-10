@@ -590,9 +590,9 @@ RectTransform:
   - {fileID: 5683576045120488962}
   m_Father: {fileID: 8556380453279367985}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -140}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 180, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9124782517596497447
@@ -676,7 +676,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1958002674422086848}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2879009662158555080}
+        m_TargetAssemblyTypeName: RechargeMaterial, Assembly-CSharp
+        m_MethodName: RechargeMax
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &393984244610697469
 GameObject:
   m_ObjectHideFlags: 0
@@ -3070,9 +3082,9 @@ RectTransform:
   - {fileID: 7083450785046564290}
   m_Father: {fileID: 8556380453279367985}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -80}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 180, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4358088986559937751
@@ -3156,7 +3168,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 832692510024382060}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2879009662158555080}
+        m_TargetAssemblyTypeName: RechargeMaterial, Assembly-CSharp
+        m_MethodName: Recharge
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2870595374211041004
 GameObject:
   m_ObjectHideFlags: 0
@@ -3340,9 +3364,9 @@ RectTransform:
   - {fileID: 8365300765807958139}
   m_Father: {fileID: 6144712486208301904}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -140}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 180, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4420250716748030895
@@ -4248,7 +4272,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8632241112256464898
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4750,13 +4774,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7200843667208277220}
+  - component: {fileID: 7932848455435517213}
+  - component: {fileID: 2864270233766972843}
   m_Layer: 5
   m_Name: HornoMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7200843667208277220
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4777,6 +4803,34 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &7932848455435517213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4826757061966812186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3d98eabd32fb424d8de7aaf52e7767a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _typesSpended: 00000000
+  _amountCost: 
+--- !u!114 &2864270233766972843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4826757061966812186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d518fd8e4bb4d94487ef65e498e62dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _typeRecharged: 1
+  _typeSpended: 0
 --- !u!1 &4841300720309999437
 GameObject:
   m_ObjectHideFlags: 0
@@ -5005,9 +5059,9 @@ RectTransform:
   - {fileID: 5616143405558103447}
   m_Father: {fileID: 8556380453279367985}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -20}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 180, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2171311473660274702
@@ -5091,7 +5145,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7195736042183485101}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2879009662158555080}
+        m_TargetAssemblyTypeName: RechargeMaterial, Assembly-CSharp
+        m_MethodName: Recharge
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5036501120440541929
 GameObject:
   m_ObjectHideFlags: 0
@@ -5867,6 +5933,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5270760557012961797}
+  - component: {fileID: 8627480989933217344}
+  - component: {fileID: 2879009662158555080}
   m_Layer: 5
   m_Name: TanqueMenu
   m_TagString: Untagged
@@ -5894,6 +5962,34 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &8627480989933217344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5602497407459959008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3d98eabd32fb424d8de7aaf52e7767a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _typesSpended: 01000000
+  _amountCost: 
+--- !u!114 &2879009662158555080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5602497407459959008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d518fd8e4bb4d94487ef65e498e62dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _typeRecharged: 0
+  _typeSpended: 1
 --- !u!1 &5611159286301105996
 GameObject:
   m_ObjectHideFlags: 0
@@ -7221,9 +7317,9 @@ RectTransform:
   - {fileID: 5062818808617659394}
   m_Father: {fileID: 6144712486208301904}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -20}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 180, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4838382540658968540
@@ -8103,9 +8199,9 @@ RectTransform:
   - {fileID: 1587036113955404916}
   m_Father: {fileID: 6144712486208301904}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -80}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 180, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3699097967948310473
