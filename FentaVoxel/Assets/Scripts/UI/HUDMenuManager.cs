@@ -28,7 +28,7 @@ public class HUDMenuManager : MonoBehaviour
         txtRobotsAgua.text = ((int)(spendingResourceManager._currentRobotsAmount)).ToString();
         txtRobotsElectricidad.text = ((int)(spendingResourceManager._currentRobotsAmount)).ToString();
 
-        spriteRobotsAgua.fillAmount = spendingResourceManager._electricity / spendingResourceManager._maxElectricity;
-        spriteRobotsElectricidad.fillAmount = spendingResourceManager._water / spendingResourceManager._maxWater;
+        spriteRobotsAgua.fillAmount = spendingResourceManager._water / spendingResourceManager._maxWater;
+        spriteRobotsElectricidad.fillAmount = spendingResourceManager._electricity / spendingResourceManager._maxElectricity;
     }
 }
