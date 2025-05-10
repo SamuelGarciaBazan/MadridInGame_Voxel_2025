@@ -176,6 +176,108 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 276b86bb18f646a40a2f524a2bdec1a3, type: 3}
+--- !u!1 &23062364
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 23062365}
+  - component: {fileID: 23062366}
+  m_Layer: 6
+  m_Name: Water
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &23062365
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23062364}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.22, y: 0, z: 1.53}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 325377488}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &23062366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23062364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab101d639e6873542962922d2dd3f2e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _resource: {fileID: 2175250700725774511, guid: c94bd4edd89ba2b47b99ab894bd3494f, type: 3}
+  _layer: WaterResource
+  _resourceNumberX: 8
+  _resourceNumberY: 8
+  _minOffset: 3
+  _maxOffset: 5
+  _percerntAmount: 1
+--- !u!1 &151648973
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 151648974}
+  - component: {fileID: 151648975}
+  m_Layer: 8
+  m_Name: Rocks
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &151648974
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151648973}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.85, y: 0, z: 4.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 325377488}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &151648975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151648973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab101d639e6873542962922d2dd3f2e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _resource: {fileID: 6082175033122162491, guid: 4a2409a814be3a94393764de8b555da3, type: 3}
+  _layer: IronResource
+  _resourceNumberX: 42
+  _resourceNumberY: 10
+  _minOffset: 3
+  _maxOffset: 5
+  _percerntAmount: 0.7
 --- !u!1001 &170234795
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -263,6 +365,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 631382073}
+  - {fileID: 23062365}
+  - {fileID: 151648974}
   m_Father: {fileID: 525987440}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &525987440 stripped
@@ -280,7 +384,7 @@ GameObject:
   m_Component:
   - component: {fileID: 631382073}
   - component: {fileID: 631382074}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -315,12 +419,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _resource: {fileID: 5854833087703968109, guid: 39adc37500d79f44b8e1defe337a6739, type: 3}
-  _outlineText: {fileID: 4900000, guid: cd06779b5c709de44a4b5ba58d068eba, type: 3}
-  _resourceNumberX: 20
-  _resourceNumberY: 5
+  _layer: WoodResource
+  _resourceNumberX: 42
+  _resourceNumberY: 12
   _minOffset: 3
-  _maxOffset: 3
-  _percerntAmount: 0.3
+  _maxOffset: 5
+  _percerntAmount: 1
 --- !u!1001 &1347094604
 PrefabInstance:
   m_ObjectHideFlags: 0

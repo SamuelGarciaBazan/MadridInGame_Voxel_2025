@@ -38,11 +38,11 @@ public class CameraRaycast : MonoBehaviour
     void Update()
     {
         
-        Vector3 mousePos = Input.mousePosition;
-        mousePos.z = _distance;
-        mousePos = _mainCamera.ScreenToWorldPoint(mousePos);
+        //Vector3 mousePos = Input.mousePosition;
+        //mousePos.z = _distance;
+        //mousePos = _mainCamera.ScreenToWorldPoint(mousePos);
 
-        Debug.DrawRay(_mainCamera.transform.position,  mousePos - _mainCamera.transform.position, Color.red);
+        //Debug.DrawRay(_mainCamera.transform.position,  mousePos - _mainCamera.transform.position, Color.red);
 
 
 
