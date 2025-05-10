@@ -55,6 +55,11 @@ public class SpendingResourceManager : MonoBehaviour
 
     }
 
+    public void SetRobotsAmount(int _robots)
+    {
+        _currentRobotsAmount = _robots;
+    }
+
     public void addResources(ResourcesType type, float amount)
     {
         switch (type)
