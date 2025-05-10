@@ -45,7 +45,6 @@ public class WorkerComponent : MonoBehaviour
             return;
         }
 
-
         if (newTarget.GetComponent<ResourceComponente>() == null) {
 
             Debug.Log("error intententando insertar un target que no tiene el componente de resourceComponente");
@@ -83,15 +82,22 @@ public class WorkerComponent : MonoBehaviour
     {
         if (_target != null)
         {
+            //actualizar timer
             _elapsedTime += Time.deltaTime;
 
             if(_elapsedTime > getResourceData(_target.GetResourcesType()).atackRate)
             {
+                //restar timer
                 _elapsedTime -= getResourceData(_target.GetResourcesType()).atackRate;
 
+
+                //sumar recurso
                 _resourceCount += getResourceData(_target.GetResourcesType()).damage;
 
+                //restar recurso del otro objeto
                 _target.subtractResources(getResourceData(_target.GetResourcesType()).damage);
+
+
 
                 if(_resourceCount >= _target.getPackageDropRate())
                 {

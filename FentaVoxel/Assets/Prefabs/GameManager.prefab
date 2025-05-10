@@ -85,4 +85,4 @@ MonoBehaviour:
     m_Bits: 256
   _copperLayer:
     serializedVersion: 2
-    m_Bits: 2560
+    m_Bits: 512
