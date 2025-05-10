@@ -39,21 +39,27 @@ public class WorkerComponent : MonoBehaviour
 
     float _resourceCount = 0;
 
+    public int _indexResourceOcupped = -1;
 
     //changeTarget
     public void setTarget(Transform newTarget)
     {
+        /*
         if(newTarget == null)
         {
             Debug.Log("error intententando insertar un target null");
 
+            _target = null;
             return;
         }
+        */
 
         if (newTarget.GetComponent<ResourceComponente>() == null) {
 
             Debug.Log("error intententando insertar un target que no tiene el componente de resourceComponente");
         
+            _target=null;
+
             return;
         }
 
@@ -64,11 +70,22 @@ public class WorkerComponent : MonoBehaviour
         {
             //drop
             dropItem();
+
+
+            //marcar como desocupado el slot
+            _target._positionsOcupeds[_indexResourceOcupped] = false;
+
+            _target = null;
         }
         else if(_target.GetResourcesType() != newTarget.GetComponent<ResourceComponente>().GetResourcesType())
         {
             //drop
             dropItem();
+
+            //marcar como desocupado el slot
+            _target._positionsOcupeds[_indexResourceOcupped] = false;
+
+            _target = null;
         }
     }
 

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -143,19 +144,56 @@ public class RobotController : MonoBehaviour
     {
         Transform nearest = null;
 
-        float minDistance = Mathf.Infinity;
-
         Collider[] hits = Physics.OverlapSphere(transform.position, _searchTargetRadious, getCurrentLayer());
 
-        foreach (var hit in hits)
+        //ordenar la lista por distancia
+        List<Transform> sortedTargets = hits
+            .OrderBy(hit => Vector3.Distance(hit.transform.position, transform.position))
+            .Select(hit => hit.transform)
+            .ToList();
+
+
+
+        foreach (var target in sortedTargets)
         {
-            float distance = Vector3.Distance(hit.transform.position, transform.position);
-            if (distance < minDistance)
+            var resourceComp = target.GetComponent<ResourceComponente>();
+            
+            //si es un recurso
+            if(resourceComp != null)
             {
-                minDistance = distance;
-                nearest = hit.transform;
-            } 
+                //recorremos sus posiciones
+                for(int i = 0; i < resourceComp._workablePositions.Count; i++)
+                {
+                    //si la posicion no esta ocupada
+                    if (!resourceComp._positionsOcupeds[i])
+                    {
+                        //TODO: comprobar si no colisiona con otro recurso 
+
+
+
+
+
+                        //IMPORTANTE : marcamos la posicion como ocupada
+                        resourceComp._positionsOcupeds[i] = true;
+                        _workerComponent._indexResourceOcupped = i;
+
+                        nearest = resourceComp._workablePositions[i]; 
+
+
+                        break;  
+                    }
+                }
+            }
+
+            //si lo hemos encontrado
+            if(nearest != null)
+            {
+                break;
+            }
         }
+
+
+      
 
         return nearest;
     }

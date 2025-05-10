@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -19,9 +20,18 @@ public class ResourceComponente : MonoBehaviour
 
     float _currentLife;
 
+    public List<Transform> _workablePositions = new List<Transform>();
+
+    public List<bool> _positionsOcupeds = new List<bool>();
+
     private void Awake()
     {
         _currentLife = _maxLife;
+
+        for (int i = 0; i < _workablePositions.Count; i++) { 
+            _positionsOcupeds.Add(false);
+        }
+
     }
     public float getPackageDropRate()
     {
