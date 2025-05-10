@@ -32,7 +32,7 @@ public class WorkerComponent : MonoBehaviour
     private float _maxDropDistance = 4;
 
     //target
-    ResourceComponente _target = null;
+    public ResourceComponente _target = null;
 
 
     float _elapsedTime = 0;
