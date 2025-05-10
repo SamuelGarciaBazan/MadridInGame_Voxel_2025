@@ -27,6 +27,16 @@ public class PickeableItemResource : MonoBehaviour
         _resourceAmount = amount;
     }
 
+    public float getResourceAmount()
+    {
+        return _resourceAmount;
+    }
+
+    public ResourcesManager.ResourcesType getResourcesType()
+    {
+        return _resourceType;
+    }
+
     //deberia llamarse solo con el transform del player
     public void followTransform(Transform target)
     {

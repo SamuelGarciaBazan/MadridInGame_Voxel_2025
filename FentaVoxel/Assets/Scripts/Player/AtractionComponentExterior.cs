@@ -15,12 +15,15 @@ public class AtractionComponentExterior : MonoBehaviour
     [SerializeField]
     LayerMask _pickeableItemLayer;
 
-
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.layer == _pickeableItemLayer)
+
+        print(other.gameObject + "layer" +other.gameObject.layer + "pick layer " + _pickeableItemLayer.value);
+
+        if (other.gameObject.layer == _pickeableItemLayer)
         {
             //mandar atraer hacia el player
+            other.GetComponentInChildren<PickeableItemResource>().followTransform(transform);
         }
     }
 

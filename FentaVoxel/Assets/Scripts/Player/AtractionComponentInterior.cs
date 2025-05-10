@@ -16,11 +16,28 @@ public class AtractionComponentInterior : MonoBehaviour
     LayerMask _pickeableItemLayer;
 
 
+    ResourcesManager _resourcesManager;
+
+
+    private void Start()
+    {
+        _resourcesManager = GameManager.getInstance().GetComponent<ResourcesManager>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == _pickeableItemLayer)
+ 
+
+        if ( ((1 << other.gameObject.layer) & _pickeableItemLayer.value) != 0)
         {
-            //sumar puntos y destruir objeto
+            //sumar puntos y destruir objet
+            float resourceAmount = other.GetComponentInChildren<PickeableItemResource>().getResourceAmount();
+
+            ResourcesManager.ResourcesType type = other.GetComponent<PickeableItemResource>().getResourcesType();
+
+            _resourcesManager.addResources(type, resourceAmount);
+
+            Destroy(other.gameObject);
         }
     }
 }

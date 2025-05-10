@@ -26,6 +26,8 @@ public class ResourcesManager : MonoBehaviour
     [SerializeField]
     float _copper;
 
+ 
+
 
     //referencias a los elementos de la UI...
 
@@ -42,4 +44,31 @@ public class ResourcesManager : MonoBehaviour
     {
         
     }
+
+    public void addResources(ResourcesType type, float amount)
+    {
+        switch (type)
+        {
+            case ResourcesType.WOOD:
+                _wood += amount;
+                break;
+
+            case ResourcesType.WATER:
+                _water += amount;
+                break;
+
+            case ResourcesType.IRON:
+                _iron += amount;
+                break;
+
+            case ResourcesType.COPPER:
+                _copper += amount;
+                break;
+
+            default:
+                Debug.LogWarning("Tipo de recurso no reconocido: " + type);
+                break;
+        }
+    }
+
 }

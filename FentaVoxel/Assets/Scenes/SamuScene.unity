@@ -551,6 +551,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1349143539943283838, guid: 9df4bad26edf99b4c9b723cca8c33a1a, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3248394171403068030, guid: 9df4bad26edf99b4c9b723cca8c33a1a, type: 3}
       propertyPath: m_Name
       value: Player
@@ -594,6 +598,10 @@ PrefabInstance:
     - target: {fileID: 4518851652334447871, guid: 9df4bad26edf99b4c9b723cca8c33a1a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5391266120500407872, guid: 9df4bad26edf99b4c9b723cca8c33a1a, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
