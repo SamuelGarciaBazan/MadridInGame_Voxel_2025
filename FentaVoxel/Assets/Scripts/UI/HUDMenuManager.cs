@@ -1,5 +1,5 @@
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 using Unity.VisualScripting;
 
 /// <summary>
@@ -8,17 +8,17 @@ using Unity.VisualScripting;
 public class HUDMenuManager : MonoBehaviour
 {
     [Header("Textos HUD")]
-    [SerializeField] private TextMeshProUGUI txtWood;
-    [SerializeField] private TextMeshProUGUI txtWater;
-    [SerializeField] private TextMeshProUGUI txtMetal;
+    [SerializeField] private Text txtWood;
+    [SerializeField] private Text txtWater;
+    [SerializeField] private Text txtMetal;
 
     [Header("Manager de recursos")]
     [SerializeField] private ResourcesManager resourcesManager;
 
     void Update() {
-        txtWood.text = resourcesManager._wood.ToString();
-        txtWater.text = resourcesManager._water.ToString();
-        txtMetal.text = resourcesManager._iron.ToString();
+        txtWood.text = ((int)(resourcesManager._wood)).ToString();
+        txtWater.text = ((int)(resourcesManager._water)).ToString();
+        txtMetal.text = ((int)(resourcesManager._iron)).ToString();
         
     }
 }
