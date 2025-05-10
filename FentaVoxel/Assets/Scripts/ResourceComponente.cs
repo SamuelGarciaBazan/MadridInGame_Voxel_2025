@@ -17,18 +17,25 @@ public class ResourceComponente : MonoBehaviour
     [SerializeField]
     ResourcesManager.ResourcesType resourceType;
 
+    float _currentLife;
 
-    public ResourcesManager.ResourcesType GetResourcesType() { return resourceType; }   
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Awake()
     {
-        
+        _currentLife = _maxLife;
     }
-
-    // Update is called once per frame
-    void Update()
+    public float getPackageDropRate()
     {
-        
+        return _packageDropRate;
+    }
+    public ResourcesManager.ResourcesType GetResourcesType() { return resourceType; }
+
+    public void subtractResources(float amount)
+    {
+        _currentLife -= amount;
+
+        if (_currentLife <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

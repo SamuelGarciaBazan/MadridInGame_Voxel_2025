@@ -14,4 +14,9 @@ public class PickeableItemResource : MonoBehaviour
     [SerializeField]
     float _resourceAmount;
 
+
+    public void setResourceAmount(float amount)
+    {
+        _resourceAmount = amount;
+    }
 }

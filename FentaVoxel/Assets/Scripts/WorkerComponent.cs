@@ -64,12 +64,6 @@ public class WorkerComponent : MonoBehaviour
         return _target;
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -85,6 +79,16 @@ public class WorkerComponent : MonoBehaviour
             if(_elapsedTime > getResourceData(_target.GetResourcesType()).atackRate)
             {
                 _elapsedTime -= getResourceData(_target.GetResourcesType()).atackRate;
+
+                _resourceCount += getResourceData(_target.GetResourcesType()).damage;
+
+                _target.subtractResources(getResourceData(_target.GetResourcesType()).damage);
+
+                if(_resourceCount >= _target.getPackageDropRate())
+                {
+                    dropItem();
+                }
+
             }
         }
     }
@@ -95,7 +99,17 @@ public class WorkerComponent : MonoBehaviour
     }
     void dropItem()
     {
-        Instantiate(getResourceData(_target.GetResourcesType()).pickableItemPrefab);
+
+        GameObject pickableItem =  Instantiate(getResourceData(_target.GetResourcesType()).pickableItemPrefab);
+
+
+        float subtractAmount = _resourceCount >=  _target.getPackageDropRate() ? _target.getPackageDropRate() : _resourceCount;
+
+        _resourceCount -= subtractAmount;
+
+        //settear la cantidad de recurso del item que hemos instanciado
+        pickableItem.GetComponentInChildren<PickeableItemResource>().setResourceAmount(subtractAmount);
+
     }
 
 }
