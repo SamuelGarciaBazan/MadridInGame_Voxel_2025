@@ -19,7 +19,7 @@ public class RechargeMaterial : MonoBehaviour
     public void RechargeMax()
     {
         
-        _srm.addResources(_typeRecharged);
+        _srm.addResources(_typeRecharged, 0);
         
     }
 
