@@ -8,8 +8,7 @@ public class CreateProcedural : MonoBehaviour
 {
 
     [SerializeField] private GameObject _resource;
-
-    [SerializeField] private TextAsset _outlineText;
+    [SerializeField] private string _layer;
 
     [SerializeField] private int _resourceNumberX;
     [SerializeField] private int _resourceNumberY;
@@ -33,14 +32,20 @@ public class CreateProcedural : MonoBehaviour
 
             float rateInstantiation = Random.Range(0.0f, 1.0f);
 
-            Debug.Log(rateInstantiation);
-
             int column = i % _resourceNumberX;
             int row = i / _resourceNumberX;
 
             if(rateInstantiation < _percerntAmount)
             {
-                Instantiate(_resource, new Vector3(transform.position.x - column * offsetX, transform.position.y, transform.position.z - row * offsetX), Quaternion.identity);
+                Vector3 position = new Vector3(transform.position.x - column * offsetX, transform.position.y, transform.position.z - row * offsetX);
+
+                if (Physics.OverlapSphere(position, 2, LayerMask.GetMask(_layer)).Length == 0){
+
+                    Instantiate(_resource, position, Quaternion.identity);
+
+                }
+
+                
             } 
             
         }
