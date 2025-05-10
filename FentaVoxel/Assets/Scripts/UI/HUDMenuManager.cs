@@ -13,12 +13,11 @@ public class HUDMenuManager : MonoBehaviour
     [SerializeField] private Text txtMetal;
     [SerializeField] private Text txtRobotsAgua;
     [SerializeField] private Text txtRobotsElectricidad;
-    [SerializeField] private Sprite spriteRobotsAgua;
-    [SerializeField] private Sprite spriteRobotsElectricidad;
+    [SerializeField] private Image spriteRobotsAgua;
+    [SerializeField] private Image spriteRobotsElectricidad;
 
     [Header("Manager de recursos")]
     [SerializeField] private ResourcesManager resourcesManager;
-    [SerializeField] private RobotManager robotManager;
     [SerializeField] private SpendingResourceManager spendingResourceManager;
 
     void Update() {
@@ -26,8 +25,10 @@ public class HUDMenuManager : MonoBehaviour
         txtWater.text = ((int)(resourcesManager._water)).ToString();
         txtMetal.text = ((int)(resourcesManager._iron)).ToString();
 
-        txtRobotsAgua.text = ((int)(robotManager.WorkingRobotsAmount())).ToString();
-        txtRobotsElectricidad.text = ((int)(robotManager.WorkingRobotsAmount())).ToString();
+        txtRobotsAgua.text = ((int)(spendingResourceManager._currentRobotsAmount)).ToString();
+        txtRobotsElectricidad.text = ((int)(spendingResourceManager._currentRobotsAmount)).ToString();
 
+        spriteRobotsAgua.fillAmount = spendingResourceManager._electricity / spendingResourceManager._maxElectricity;
+        spriteRobotsElectricidad.fillAmount = spendingResourceManager._water / spendingResourceManager._maxWater;
     }
 }
