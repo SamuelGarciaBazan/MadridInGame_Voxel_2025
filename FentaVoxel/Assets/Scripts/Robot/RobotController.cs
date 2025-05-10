@@ -49,7 +49,14 @@ public class RobotController : MonoBehaviour
         {
             _currentResourceTarget = newTarget;
 
-            if(newTarget == RobotManager.RobotResourceTarget.NONE)
+
+            if (RobotState.GO_TO_TARGET == _currentState)
+            {
+
+                _objectTarget.GetComponentInParent<ResourceComponente>()._positionsOcupeds[_workerComponent._indexResourceOcupped] = false;
+            }
+
+            if (newTarget == RobotManager.RobotResourceTarget.NONE)
             {
                 _currentState = RobotState.DESACTIVE;
                 _navMeshAgent.SetDestination(transform.position);
@@ -58,6 +65,9 @@ public class RobotController : MonoBehaviour
             {
                 _currentState = RobotState.SEARCH_TARGET;   
             }
+
+
+           
 
             //si nuestro worker estaba trabajando, lo liberamos
             _workerComponent.setTarget(null);

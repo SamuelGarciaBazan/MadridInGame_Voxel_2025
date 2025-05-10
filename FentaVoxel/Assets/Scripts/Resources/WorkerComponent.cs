@@ -46,7 +46,7 @@ public class WorkerComponent : MonoBehaviour
     {
         if(newTarget == null)
         {
-            //Debug.Log("error intententando insertar un target null");
+            Debug.Log("error intententando insertar un target null");
 
             if(_target != null && _indexResourceOcupped >= 0)
             {
@@ -60,7 +60,7 @@ public class WorkerComponent : MonoBehaviour
 
         if (newTarget.GetComponentInParent<ResourceComponente>() == null) {
 
-            //Debug.Log("error intententando insertar un target que no tiene el componente de resourceComponente");
+            Debug.Log("error intententando insertar un target que no tiene el componente de resourceComponente");
         
             _target=null;
 
