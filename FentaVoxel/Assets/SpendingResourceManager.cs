@@ -8,17 +8,17 @@ public class SpendingResourceManager : MonoBehaviour
     }
 
     [SerializeField]
-    float _water;
+    public float _water;
 
     [SerializeField]
-    float _electricity;
+    public float _electricity;
 
-    [SerializeField] float _maxWater;
-    [SerializeField] float _maxElectricity;
-    [SerializeField] float _waterSpending;
-    [SerializeField] float _electricitySpending;
+    [SerializeField] public float _maxWater;
+    [SerializeField] public float _maxElectricity;
+    [SerializeField] public float _waterSpending;
+    [SerializeField] public float _electricitySpending;
 
-    [SerializeField] float _currentRobotsAmount;
+    [SerializeField] public float _currentRobotsAmount;
 
     float _elapsedTime = 0;
 
@@ -86,6 +86,30 @@ public class SpendingResourceManager : MonoBehaviour
                 Debug.LogWarning("Tipo de recurso no reconocido: " + type);
                 break;
         }
+    }
+
+    public void addMaxResources(ResourcesType type, float amount)
+    {
+        switch (type)
+        {
+            case ResourcesType.ELECTRICITY:
+
+                    _electricity += amount;
+
+                break;
+
+            case ResourcesType.WATER:
+
+                    _water += amount;
+
+                break;
+
+            default:
+                Debug.LogWarning("Tipo de recurso no reconocido: " + type);
+                break;
+        }
+
+
     }
 
 }

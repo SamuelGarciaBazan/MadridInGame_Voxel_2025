@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3006154322347437954}
   - component: {fileID: 4725099246616082314}
   - component: {fileID: 170768376302302488}
+  - component: {fileID: 6815946901599672924}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -237,3 +238,22 @@ MonoBehaviour:
   m_DefaultActionMap: UI
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &6815946901599672924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7106530100733888513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0541f92e8c5fb0741a0e69aa0113e124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _water: 100
+  _electricity: 100
+  _maxWater: 1000
+  _maxElectricity: 1000
+  _waterSpending: 1
+  _electricitySpending: 1
+  _currentRobotsAmount: 0
