@@ -33,6 +33,8 @@ public class SpendMaterialHUDController : MonoBehaviour
             canDeposit = false;
         }
 
+        i = 0;
+
         if (canDeposit)
         {
             while (i < _typesSpended.Length && canDeposit)
@@ -60,6 +62,8 @@ public class SpendMaterialHUDController : MonoBehaviour
             }
             ++i;
         }
+
+        i = 0;
 
         if (canDeposit)
         {

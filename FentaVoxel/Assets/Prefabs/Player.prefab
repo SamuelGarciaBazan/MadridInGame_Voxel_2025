@@ -376,7 +376,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc5134d5ec030194f8183364f6424c49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resourcesData: []
+  _resourcesData:
+  - damage: 5
+    atackRate: 1
+    layer:
+      serializedVersion: 2
+      m_Bits: 128
+    pickableItemPrefab: {fileID: 3576304266163525746, guid: b8ed816335954c44f9d9934a18221bc1, type: 3}
+  - damage: 5
+    atackRate: 1
+    layer:
+      serializedVersion: 2
+      m_Bits: 64
+    pickableItemPrefab: {fileID: 3576304266163525746, guid: 85e16a9a9ce74b34f978f67a9c268423, type: 3}
+  - damage: 5
+    atackRate: 1
+    layer:
+      serializedVersion: 2
+      m_Bits: 256
+    pickableItemPrefab: {fileID: 3576304266163525746, guid: 7f3a76294c5b84848a0ae1fc6dae235f, type: 3}
+  - damage: 5
+    atackRate: 1
+    layer:
+      serializedVersion: 2
+      m_Bits: 512
+    pickableItemPrefab: {fileID: 3576304266163525746, guid: f2841009c88f97b449f14935de7c48b2, type: 3}
   _minDropDistance: 1
   _maxDropDistance: 4
   _indexResourceOcupped: -1
@@ -484,6 +508,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: f61ff44c-4b7f-45ab-aadb-258e263b8450
     m_ActionName: 'PlayerMap/Dash[/Keyboard/shift]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1362825223091438050}
+        m_TargetAssemblyTypeName: PlayerWork, Assembly-CSharp
+        m_MethodName: Work
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0255f90b-f328-4075-9b4c-b2aacf632518
+    m_ActionName: 'PlayerMap/Interact[/Keyboard/e]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerMap

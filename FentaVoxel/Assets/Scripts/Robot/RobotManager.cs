@@ -42,6 +42,14 @@ public class RobotManager : MonoBehaviour
     public int FreeRobots => freeRobots.Count;
 
     /// <summary>
+    /// Número total de robots en todas las listas.
+    /// </summary>
+    public int TotalRobots() {
+        return freeRobots.Count + woodRobots.Count + waterRobots.Count + ironRobots.Count;
+    }
+
+
+    /// <summary>
     /// Devuelve la cantidad de robots asignados al recurso indicado.
     /// </summary>
     public int GetRobots(ResourcesManager.ResourcesType type) {
@@ -71,6 +79,7 @@ public class RobotManager : MonoBehaviour
     public GameObject CreateRobot(Vector3 position = default) {
         var go = Instantiate(robotPrefab, position, Quaternion.identity);
         freeRobots.Add(go);
+        go.SetActive(false);
         OnRobotCountsChanged?.Invoke();
         return go;
     }
@@ -99,6 +108,7 @@ public class RobotManager : MonoBehaviour
         var robot = freeRobots[freeRobots.Count - 1];
         freeRobots.RemoveAt(freeRobots.Count - 1);
         GetListByType(type).Add(robot);
+        robot.SetActive(true);
         robot.GetComponent<RobotController>().setResourceTarget(ConvertToResourceTarget(type));
         OnRobotCountsChanged?.Invoke();
         return true;
