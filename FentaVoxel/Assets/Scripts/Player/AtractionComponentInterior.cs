@@ -26,10 +26,11 @@ public class AtractionComponentInterior : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
- 
+        //print("interior enter, gameObject "+  other.gameObject.name);   
 
         if ( ((1 << other.gameObject.layer) & _pickeableItemLayer.value) != 0)
         {
+            //print("dentroooo");
             //sumar puntos y destruir objet
             float resourceAmount = other.GetComponentInChildren<PickeableItemResource>().getResourceAmount();
 
@@ -37,7 +38,7 @@ public class AtractionComponentInterior : MonoBehaviour
 
             _resourcesManager.addResources(type, resourceAmount);
 
-            Destroy(other.gameObject);
+            Destroy(other.gameObject.transform.parent.gameObject);
         }
     }
 }

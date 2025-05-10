@@ -18,10 +18,11 @@ public class AtractionComponentExterior : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        print(other.gameObject + "layer" +other.gameObject.layer + "pick layer " + _pickeableItemLayer.value);
+        //print(other.gameObject + "layer" +other.gameObject.layer + "pick layer " + _pickeableItemLayer.value);
 
-        if (other.gameObject.layer == _pickeableItemLayer)
+        if (((1 << other.gameObject.layer) & _pickeableItemLayer.value) != 0)
         {
+            //print("atraeerrr");
             //mandar atraer hacia el player
             other.GetComponentInChildren<PickeableItemResource>().followTransform(transform);
         }

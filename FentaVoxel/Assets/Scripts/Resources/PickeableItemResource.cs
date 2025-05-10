@@ -47,8 +47,8 @@ public class PickeableItemResource : MonoBehaviour
     {
         if (_target != null) {
 
-            transform.position = Vector3.MoveTowards(
-            transform.position,
+            transform.parent.position = Vector3.MoveTowards(
+            transform.parent.position,
             _target.position,
             _movementVelocity * Time.deltaTime
             );
