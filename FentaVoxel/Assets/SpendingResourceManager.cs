@@ -18,7 +18,7 @@ public class SpendingResourceManager : MonoBehaviour
     [SerializeField] public float _waterSpending;
     [SerializeField] public float _electricitySpending;
 
-    [SerializeField] public float _currentRobotsAmount;
+    [SerializeField] public float _currentRobotsAmount; 
 
     //referencias a los elementos de la UI...
 
@@ -36,7 +36,7 @@ public class SpendingResourceManager : MonoBehaviour
             {
                 _water -= _waterSpending * _currentRobotsAmount * Time.deltaTime;
             }
-            
+       
             if(_electricity > 0)
             {
                 _electricity -= _electricitySpending * _currentRobotsAmount * Time.deltaTime;

@@ -41,6 +41,12 @@ public class RobotManager : MonoBehaviour
     /// </summary>
     public int FreeRobots => freeRobots.Count;
 
+    private void Update() {
+        if (spendingResourceManager._electricity <= 0) Apagon();
+        if (spendingResourceManager._water <= 0) Apagon();
+    }
+
+
     /// <summary>
     /// Número total de robots trabajando (no incluye libres).
     /// </summary>
