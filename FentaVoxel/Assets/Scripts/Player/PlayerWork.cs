@@ -142,7 +142,14 @@ public class PlayerWork : MonoBehaviour
         }
         else
         {
-            _workerComponent.setTarget(_lastNearest.transform);
+            if (_lastNearest != null) { 
+                _workerComponent.setTarget(_lastNearest.transform);
+            }
+            else
+            {
+                _workerComponent.setTarget(null);
+            }
+
         }
 
     }

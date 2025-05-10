@@ -26,7 +26,7 @@ public class BuildingDetector : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.GetComponent<Edificio>() == _nearestBuilding)
+        if(other.GetComponent<Edificio>() != null && other.GetComponent<Edificio>() == _nearestBuilding)
         {
             setPanelActive(_nearestBuilding.tipoEdificio, false);
             _nearestBuilding = null;
