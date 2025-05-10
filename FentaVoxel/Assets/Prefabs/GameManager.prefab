@@ -91,6 +91,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   robotPrefab: {fileID: 2272740301015010850, guid: 4a17c66aee1248d43becfd74914e8bf6, type: 3}
+  spendingResourceManager: {fileID: 6815946901599672924}
 --- !u!114 &3006154322347437954
 MonoBehaviour:
   m_ObjectHideFlags: 0

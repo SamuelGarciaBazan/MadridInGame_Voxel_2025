@@ -5380,7 +5380,12 @@ MonoBehaviour:
   txtWood: {fileID: 3403127991872301472}
   txtWater: {fileID: 9099008359749522605}
   txtMetal: {fileID: 7425307240810526572}
+  txtRobotsAgua: {fileID: 7841926342304585986}
+  txtRobotsElectricidad: {fileID: 3365309447373762073}
+  spriteRobotsAgua: {fileID: 7207375204764980007}
+  spriteRobotsElectricidad: {fileID: 4267358279575984009}
   resourcesManager: {fileID: 0}
+  spendingResourceManager: {fileID: 0}
 --- !u!1 &5357146707911870375
 GameObject:
   m_ObjectHideFlags: 0
