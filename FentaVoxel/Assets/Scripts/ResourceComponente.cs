@@ -14,6 +14,9 @@ public class ResourceComponente : MonoBehaviour
     [Tooltip("Cada cuanta cantidad extraida de este recurso se suelta un item del recurso")]
     float _packageDropRate;
 
+    [SerializeField]
+    ResourcesManager.ResourcesType resourceType;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

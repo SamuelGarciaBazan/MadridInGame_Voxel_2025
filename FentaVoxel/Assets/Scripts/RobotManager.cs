@@ -12,9 +12,15 @@ este componente esta en el objeto de GameManager
  */
 public class RobotManager : MonoBehaviour
 {
-    public enum RobotState
+    public LayerMask _woodLayer;
+    public LayerMask _waterLayer;
+    public LayerMask _ironLayer;
+    public LayerMask _copperLayer;
+
+
+    public enum RobotResourceTarget
     {
-        DESACTIVE,
+        NONE,
         GET_WOOD,
         GET_WATER,
         GET_IRON,
