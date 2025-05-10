@@ -34,6 +34,7 @@ public class RechargeMaterial : MonoBehaviour
     void Start()
     {
         _gm = GameManager.getInstance();
+        _rm = _gm.GetComponent<ResourcesManager>();
         _srm = _gm.GetComponent<SpendingResourceManager>();
         _smhc = GetComponent<SpendMaterialHUDController>();
     }

@@ -51,6 +51,8 @@ public class SpendingResourceManager : MonoBehaviour
 
     public void addResources(ResourcesType type, float amount)
     {
+        Debug.Log("Rellena");
+
         switch (type)
         {
             case ResourcesType.ELECTRICITY:

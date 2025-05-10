@@ -590,9 +590,9 @@ RectTransform:
   - {fileID: 5683576045120488962}
   m_Father: {fileID: 8556380453279367985}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -140}
   m_SizeDelta: {x: 180, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9124782517596497447
@@ -3082,9 +3082,9 @@ RectTransform:
   - {fileID: 7083450785046564290}
   m_Father: {fileID: 8556380453279367985}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -80}
   m_SizeDelta: {x: 180, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4358088986559937751
@@ -3450,7 +3450,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1053286088928499868}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2864270233766972843}
+        m_TargetAssemblyTypeName: RechargeMaterial, Assembly-CSharp
+        m_MethodName: RechargeMax
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3468770691868025655
 GameObject:
   m_ObjectHideFlags: 0
@@ -5059,9 +5071,9 @@ RectTransform:
   - {fileID: 5616143405558103447}
   m_Father: {fileID: 8556380453279367985}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -20}
   m_SizeDelta: {x: 180, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2171311473660274702
@@ -7403,7 +7415,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 672039364109085453}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2864270233766972843}
+        m_TargetAssemblyTypeName: RechargeMaterial, Assembly-CSharp
+        m_MethodName: Recharge
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7399105769633982401
 GameObject:
   m_ObjectHideFlags: 0
@@ -8285,7 +8309,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3902117095213700879}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2864270233766972843}
+        m_TargetAssemblyTypeName: RechargeMaterial, Assembly-CSharp
+        m_MethodName: Recharge
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8683869715940691071
 GameObject:
   m_ObjectHideFlags: 0
