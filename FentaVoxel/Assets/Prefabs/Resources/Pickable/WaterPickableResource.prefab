@@ -189,6 +189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _resourceType: 1
   _resourceAmount: 0
+  _movementVelocity: 1
 --- !u!1 &8510786680857973341
 GameObject:
   m_ObjectHideFlags: 0
