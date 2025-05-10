@@ -15,16 +15,16 @@ public class ResourcesManager : MonoBehaviour
 
 
     [SerializeField]
-    float _wood;
+    public float _wood;
 
     [SerializeField]
-    float _water;
+    public float _water;
 
     [SerializeField]
-    float _iron;
+    public float _iron;
 
     [SerializeField]
-    float _copper;
+    public float _copper;
 
  
 
