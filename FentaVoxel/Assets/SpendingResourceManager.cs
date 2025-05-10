@@ -81,11 +81,19 @@ public class SpendingResourceManager : MonoBehaviour
 
     public float addMaxResources(ResourcesType type, float amount)
     {
+        float vuelta = 0;
+
         switch (type)
         {
             case ResourcesType.ELECTRICITY:
 
                     _electricity += amount;
+
+                    if (_electricity > _maxElectricity)
+                    {
+                        vuelta = _electricity - _maxElectricity;
+                        _electricity = _maxElectricity;
+                    }
 
                 break;
 
@@ -93,20 +101,18 @@ public class SpendingResourceManager : MonoBehaviour
 
                     _water += amount;
 
+                    if (_water > _maxWater)
+                    {
+                        vuelta = _water - _maxWater;
+                        _water = _maxWater;
+                    }
+
                 break;
 
             default:
                 Debug.LogWarning("Tipo de recurso no reconocido: " + type);
                 break;
-        }
-
-        float vuelta = 0;
-
-        if (_electricity > _maxElectricity)
-        {
-            vuelta = _electricity - _maxElectricity;
-            _electricity = _maxElectricity;
-        }
+        }   
 
         return vuelta;
         
