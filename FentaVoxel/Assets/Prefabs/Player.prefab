@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7197070865427369691}
   - component: {fileID: 5391266120500407872}
   - component: {fileID: 3037148202078357487}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: InteriorTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ GameObject:
   - component: {fileID: 2275280941980602215}
   - component: {fileID: 1349143539943283838}
   - component: {fileID: 8821383062398367810}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: ExteriorTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +153,7 @@ GameObject:
   - component: {fileID: 6824609254461534885}
   - component: {fileID: 757835949525204926}
   - component: {fileID: 887440957678395390}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,8 +170,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.8963065, y: 1.6467603, z: -1.8715732}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1.7}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1824836472762613818}
   - {fileID: 1073136923003725139}
@@ -241,6 +241,7 @@ MonoBehaviour:
     pickableItemPrefab: {fileID: 3576304266163525746, guid: f2841009c88f97b449f14935de7c48b2, type: 3}
   _minDropDistance: 1
   _maxDropDistance: 4
+  _target: {fileID: 0}
   _indexResourceOcupped: -1
 --- !u!54 &6396999672693233287
 Rigidbody:
@@ -394,6 +395,7 @@ MonoBehaviour:
   _resourcesData: []
   _minDropDistance: 1
   _maxDropDistance: 4
+  _target: {fileID: 0}
   _indexResourceOcupped: -1
 --- !u!1 &3326675647914074479
 GameObject:
@@ -404,7 +406,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1824836472762613818}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: AttractResources
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -439,7 +441,7 @@ GameObject:
   - component: {fileID: 1073136923003725139}
   - component: {fileID: 2862415482613757789}
   - component: {fileID: 1362825223091438050}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: PlayerWorkManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -511,7 +513,7 @@ GameObject:
   - component: {fileID: 4675697505918146454}
   - component: {fileID: 493298472560490822}
   - component: {fileID: 4241797976490034915}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: BuildingDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -634,9 +636,57 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7385675074266042019, guid: a317c0872b4e8d54a90395823e3601a8, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: -7051815428354944013, guid: a317c0872b4e8d54a90395823e3601a8, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: -4641173189466097845, guid: a317c0872b4e8d54a90395823e3601a8, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: -3950562658433944421, guid: a317c0872b4e8d54a90395823e3601a8, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: -3328742687747229100, guid: a317c0872b4e8d54a90395823e3601a8, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: -1714703120653609437, guid: a317c0872b4e8d54a90395823e3601a8, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: -1099335285874556499, guid: a317c0872b4e8d54a90395823e3601a8, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: -264760996780235955, guid: a317c0872b4e8d54a90395823e3601a8, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 867794261808894875, guid: a317c0872b4e8d54a90395823e3601a8, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a317c0872b4e8d54a90395823e3601a8, type: 3}
       propertyPath: m_Name
       value: personaje_principal_txtfbx
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a317c0872b4e8d54a90395823e3601a8, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553861371925428539, guid: a317c0872b4e8d54a90395823e3601a8, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6311937227393630678, guid: a317c0872b4e8d54a90395823e3601a8, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

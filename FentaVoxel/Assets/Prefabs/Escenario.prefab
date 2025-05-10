@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 11255
   m_UseGeometry: 0
   m_DefaultArea: 0
   m_GenerateLinks: 0
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 03aced9932cf04c4aa8b70c4c2bafd5d, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 3a1355ae38ed8924eafeee43809f2dc5, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &5367062701663942221
 GameObject:
@@ -260,6 +260,7 @@ MonoBehaviour:
   _minOffset: 3
   _maxOffset: 5
   _percerntAmount: 1
+  surface: {fileID: 6439990258362107479}
 --- !u!1 &8898627877878120650
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,6 +312,7 @@ MonoBehaviour:
   _minOffset: 3
   _maxOffset: 5
   _percerntAmount: 0.7
+  surface: {fileID: 6439990258362107479}
 --- !u!1 &8911719928499281376
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,3 +364,4 @@ MonoBehaviour:
   _minOffset: 3
   _maxOffset: 5
   _percerntAmount: 1
+  surface: {fileID: 6439990258362107479}
