@@ -61,9 +61,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d173f90a7ba38c43818ca5d08b86348, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _wood: 0
-  _water: 0
-  _iron: 0
+  _wood: 100
+  _water: 100
+  _iron: 100
   _copper: 0
 --- !u!114 &7318671338466966856
 MonoBehaviour:
@@ -89,6 +89,7 @@ MonoBehaviour:
   _copperLayer:
     serializedVersion: 2
     m_Bits: 512
+  robotPrefab: {fileID: 2272740301015010850, guid: 4a17c66aee1248d43becfd74914e8bf6, type: 3}
 --- !u!114 &3006154322347437954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,8 +102,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 557201b6a4c665545a0181dfcc1986f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraRaycast: {fileID: 4725099246616082314}
-  _chooseRobotTaskPanel: {fileID: 0}
+  _robotLayerMask:
+    serializedVersion: 2
+    m_Bits: 8192
+  _cameraRaycast: {fileID: 0}
 --- !u!114 &4725099246616082314
 MonoBehaviour:
   m_ObjectHideFlags: 0
