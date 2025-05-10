@@ -31,6 +31,7 @@ public class RobotManager : MonoBehaviour
     private readonly List<GameObject> waterRobots = new List<GameObject>();
     private readonly List<GameObject> ironRobots = new List<GameObject>();
 
+    [SerializeField] private SpendingResourceManager spendingResourceManager;
     /// <summary>
     /// Evento disparado cuando cambia la cantidad de robots en cualquier lista.
     /// </summary>
@@ -44,8 +45,8 @@ public class RobotManager : MonoBehaviour
     /// <summary>
     /// Número total de robots en todas las listas.
     /// </summary>
-    public int TotalRobots() {
-        return freeRobots.Count + woodRobots.Count + waterRobots.Count + ironRobots.Count;
+    public int WorkingRobotsAmount() {
+        return woodRobots.Count + waterRobots.Count + ironRobots.Count;
     }
 
 
@@ -93,9 +94,10 @@ public class RobotManager : MonoBehaviour
             return false;
         var robot = list[list.Count - 1];
         list.RemoveAt(list.Count - 1);
-        freeRobots.Add(robot);
+        freeRobots.Add(robot);    
         robot.GetComponent<RobotController>().setResourceTarget(RobotResourceTarget.NONE);
         OnRobotCountsChanged?.Invoke();
+        spendingResourceManager.SetRobotsAmount(WorkingRobotsAmount());
         return true;
     }
 
@@ -111,6 +113,7 @@ public class RobotManager : MonoBehaviour
         robot.SetActive(true);
         robot.GetComponent<RobotController>().setResourceTarget(ConvertToResourceTarget(type));
         OnRobotCountsChanged?.Invoke();
+        spendingResourceManager.SetRobotsAmount(WorkingRobotsAmount());
         return true;
     }
 

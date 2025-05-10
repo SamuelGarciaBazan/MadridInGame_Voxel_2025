@@ -11,13 +11,23 @@ public class HUDMenuManager : MonoBehaviour
     [SerializeField] private Text txtWood;
     [SerializeField] private Text txtWater;
     [SerializeField] private Text txtMetal;
+    [SerializeField] private Text txtRobotsAgua;
+    [SerializeField] private Text txtRobotsElectricidad;
+    [SerializeField] private Sprite spriteRobotsAgua;
+    [SerializeField] private Sprite spriteRobotsElectricidad;
 
     [Header("Manager de recursos")]
     [SerializeField] private ResourcesManager resourcesManager;
+    [SerializeField] private RobotManager robotManager;
+    [SerializeField] private SpendingResourceManager spendingResourceManager;
 
     void Update() {
         txtWood.text = ((int)(resourcesManager._wood)).ToString();
         txtWater.text = ((int)(resourcesManager._water)).ToString();
         txtMetal.text = ((int)(resourcesManager._iron)).ToString();
+
+        txtRobotsAgua.text = ((int)(robotManager.WorkingRobotsAmount())).ToString();
+        txtRobotsElectricidad.text = ((int)(robotManager.WorkingRobotsAmount())).ToString();
+
     }
 }
