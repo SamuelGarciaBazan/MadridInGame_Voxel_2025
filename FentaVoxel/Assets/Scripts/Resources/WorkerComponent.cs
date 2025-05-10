@@ -100,7 +100,7 @@ public class WorkerComponent : MonoBehaviour
     void dropItem()
     {
 
-        GameObject pickableItem =  Instantiate(getResourceData(_target.GetResourcesType()).pickableItemPrefab);
+        GameObject pickableItem =  Instantiate(getResourceData(_target.GetResourcesType()).pickableItemPrefab, transform.position, Quaternion.identity);
 
 
         float subtractAmount = _resourceCount >=  _target.getPackageDropRate() ? _target.getPackageDropRate() : _resourceCount;

@@ -9,6 +9,7 @@ su tipo y cantidad
 */
 public class PickeableItemResource : MonoBehaviour
 {
+    [SerializeField]    
     ResourcesManager.ResourcesType _resourceType;
 
     [SerializeField]
