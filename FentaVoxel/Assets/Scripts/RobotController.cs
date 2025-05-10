@@ -24,6 +24,8 @@ public class RobotController : MonoBehaviour
 
     NavMeshAgent _navMeshAgent;
 
+    WorkerComponent _workerComponent;
+
     Transform _objectTarget;
 
     enum RobotState
@@ -42,12 +44,29 @@ public class RobotController : MonoBehaviour
 
     public void setResourceTarget(RobotManager.RobotResourceTarget newTarget) { 
 
+        if(_currentResourceTarget != newTarget)
+        {
+            _currentResourceTarget = newTarget;
+
+            if(newTarget == RobotManager.RobotResourceTarget.NONE)
+            {
+                _currentState = RobotState.DESACTIVE;
+            }
+            else
+            {
+                _currentState = RobotState.SEARCH_TARGET;   
+            }
+
+            //si nuestro worker estaba trabajando, lo liberamos
+            _workerComponent.setTarget(null);
+        }
 
     }
 
     private void Awake()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();   
+        _workerComponent = GetComponent<WorkerComponent>();
     }
 
 
@@ -103,13 +122,18 @@ public class RobotController : MonoBehaviour
                     {
                         _currentState = RobotState.WORKING;
                         _navMeshAgent.SetDestination(transform.position);//para que deje de moverse
+                        _workerComponent.setTarget(_objectTarget);
                     }
                 }
                 break;
 
             case RobotState.WORKING:
                 {
-
+                    if (_workerComponent.getTarget() == null) { 
+                    
+                        _currentState = RobotState.SEARCH_TARGET;
+                        _workerComponent.setTarget(null);
+                    }
                 }
                 break;
         }

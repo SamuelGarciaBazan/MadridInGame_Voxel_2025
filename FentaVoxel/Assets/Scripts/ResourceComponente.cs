@@ -18,6 +18,8 @@ public class ResourceComponente : MonoBehaviour
     ResourcesManager.ResourcesType resourceType;
 
 
+    public ResourcesManager.ResourcesType GetResourcesType() { return resourceType; }   
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
