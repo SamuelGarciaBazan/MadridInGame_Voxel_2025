@@ -71,4 +71,74 @@ public class ResourcesManager : MonoBehaviour
         }
     }
 
+    public bool hasEnoughResource(ResourcesType type, float amount) 
+    {
+
+        bool hasEnough = false;
+
+        switch (type)
+        {
+            case ResourcesType.WOOD:
+                if (amount <= _wood)
+                {
+                    hasEnough = true;
+                }
+                break;
+
+            case ResourcesType.WATER:
+                if (amount <= _water)
+                {
+                    hasEnough = true;
+                }
+                break;
+
+            case ResourcesType.IRON:
+                if (amount <= _iron)
+                {
+                    hasEnough = true;
+                }
+                break;
+
+            default:
+                Debug.LogWarning("Tipo de recurso no reconocido: " + type);
+                break;
+        }
+
+        return hasEnough;
+
+    }
+
+    public bool spendResource(ResourcesType type, float amount)
+    {
+
+        if(hasEnoughResource(type, amount))
+        {
+            switch (type)
+            {
+                case ResourcesType.WOOD:
+                    _wood -= amount;
+                    break;
+
+                case ResourcesType.WATER:
+                    _water -= amount;
+                    break;
+
+                case ResourcesType.IRON:
+                    _iron -= amount;
+                    break;
+
+                default:
+                    Debug.LogWarning("Tipo de recurso no reconocido: " + type);
+                    break;
+            }
+
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
+    }
+
 }
