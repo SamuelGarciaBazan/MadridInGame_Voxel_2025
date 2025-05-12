@@ -29,9 +29,9 @@ Transform:
   m_GameObject: {fileID: 2272740301015010850}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: -1.2233, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7145623536708764596}
   m_Father: {fileID: 0}
@@ -136,6 +136,7 @@ MonoBehaviour:
     pickableItemPrefab: {fileID: 3576304266163525746, guid: f2841009c88f97b449f14935de7c48b2, type: 3}
   _minDropDistance: 1
   _maxDropDistance: 4
+  _target: {fileID: 0}
   _indexResourceOcupped: -1
 --- !u!1001 &7251045823009465439
 PrefabInstance:
